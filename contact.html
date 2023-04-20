@@ -48,6 +48,9 @@
             <li><a href="#">my menu</a></li>
             <li><a href="#">login</a></li>
           </ul>
+          <div class="d-none" id="burger">
+            <span class="material-symbols-outlined"> menu </span>
+          </div>
         </div>
       </div>
       <div class="slogan">
@@ -163,28 +166,7 @@
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=912699f6b62b5caa3557d25664104a48"
     ></script>
-    <script>
-      var container = document.getElementById("map");
-      var options = {
-        center: new kakao.maps.LatLng(35.1504754, 126.8392961),
-        level: 3,
-      };
-
-      var map = new kakao.maps.Map(container, options);
-
-      // 마커가 표시될 위치입니다
-      var markerPosition = new kakao.maps.LatLng(35.1504754, 126.8392961);
-
-      // 마커를 생성합니다
-      var marker = new kakao.maps.Marker({
-        position: markerPosition,
-      });
-
-      // 마커가 지도 위에 표시되도록 설정합니다
-      marker.setMap(map);
-
-      // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-      // marker.setMap(null);
-    </script>
+    <script src="script/kakao_map.js"></script>
+    <script src="script/menu.js"></script>
   </body>
 </html>
